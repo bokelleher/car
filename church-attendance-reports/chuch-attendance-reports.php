@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Church Attendance Reports
  * Description: Manages church attendance reports with role-based access control.
- * Version: 1.0.11
+ * Version: 1.0.12
  * Author: Bo Kelleher
  */
 
