@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Church Attendance Reports
  * Description: Manages church attendance reports with role-based access control.
- * Version: 1.0.12
+ * Version: 1.0.13
  * Author: Bo Kelleher
  */
 
@@ -25,3 +25,4 @@ require_once plugin_dir_path(__FILE__) . 'includes/meta-display-box.php';
 require_once plugin_dir_path(__FILE__) . 'includes/shortcode-report-detail.php';
 require_once plugin_dir_path(__FILE__) . 'includes/shortcode-district-report.php';
 require_once plugin_dir_path(__FILE__) . 'includes/access-control.php';
+require_once plugin_dir_path(__FILE__) . 'includes/menu-switch.php';
