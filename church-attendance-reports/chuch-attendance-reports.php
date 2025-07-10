@@ -24,3 +24,37 @@ require_once plugin_dir_path(__FILE__) . 'includes/admin-columns.php';
 require_once plugin_dir_path(__FILE__) . 'includes/meta-display-box.php';
 require_once plugin_dir_path(__FILE__) . 'includes/shortcode-report-detail.php';
 require_once plugin_dir_path(__FILE__) . 'includes/shortcode-district-report.php';
+
+// Swap navigation menu based on custom user roles
+function car_dynamic_menu_by_role($args) {
+    if (is_admin()) {
+        return $args; // Skip for admin dashboard
+    }
+
+    if (is_user_logged_in()) {
+        $user = wp_get_current_user();
+        $role = $user->roles[0] ?? '';
+
+        switch ($role) {
+            case 'district_admin':
+                $args['menu'] = 'District Admin Menu'; // Match the exact menu name
+                break;
+            case 'church_admin':
+                $args['menu'] = 'Church Admin Menu';
+                break;
+            case 'church_reporter':
+                $args['menu'] = 'Reporter Menu';
+                break;
+            case 'church_viewer':
+                $args['menu'] = 'Viewer Menu';
+                break;
+            default:
+                $args['menu'] = 'Default Logged-in Menu';
+        }
+    } else {
+        $args['menu'] = 'Guest Menu'; // Menu for non-logged-in users
+    }
+
+    return $args;
+}
+add_filter('wp_nav_menu_args', 'car_dynamic_menu_by_role');
