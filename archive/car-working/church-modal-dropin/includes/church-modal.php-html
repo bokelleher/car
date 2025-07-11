@@ -1,0 +1,17 @@
+<button id="car-open-modal" class="button button-primary">Add New Church</button>
+<div id="car-church-modal">
+  <div id="car-church-modal-content">
+    <span class="car-close-modal">&times;</span>
+    <h2>Add New Church</h2>
+    <form id="car-church-modal-form">
+      <p><label>Name<br><input type="text" name="name" required class="regular-text"></label></p>
+      <p><label>Slug<br><input type="text" name="slug" class="regular-text"></label></p>
+      <p><label>Pastor Name<br><input type="text" name="pastor_name" class="regular-text"></label></p>
+      <p><label>Website<br><input type="url" name="website" class="regular-text"></label></p>
+      <p><label>Address<br><textarea name="address" class="large-text"></textarea></label></p>
+      <p><button id="car-modal-submit" type="submit" class="button button-primary">Save Church</button>
+         <span id="car-modal-spinner" class="spinner" style="float:none;margin:0 0 0 10px;"></span>
+      </p>
+    </form>
+  </div>
+</div>
