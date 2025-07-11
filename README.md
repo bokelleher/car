@@ -1,95 +1,80 @@
-# Church Attendance Plugin
+# Church Attendance Reports
 
-The **Church Attendance Plugin** is a custom WordPress plugin designed to capture and manage weekly and/or monthly attendance reports submitted by individual churches. It supports a multi-tiered role-based system to ensure proper access and delegation across a district-wide network of churches.
-
----
-
-## 📌 Features
-
-- **Role-Based Access Control**
-  - **District Admin**: View reports from all churches and manage church-level users.
-  - **Church Admin**: Manage users within their assigned church (Reporters and Viewers).
-  - **Church Reporter**: Submit attendance reports for their assigned church.
-  - **Church Viewer**: View attendance data for their church only.
-
-- **Flexible Reporting**
-  - Capture **weekly** and/or **monthly** attendance numbers.
-  - Categories include in-person attendance, online participation, discipleship, and visitation.
-
-- **Multi-Church Support**
-  - Assign churches via a custom taxonomy.
-  - Church-specific data views for granular control.
-
-- **Front-End and Admin Interface**
-  - Submit reports via front-end shortcodes.
-  - Admin views for managing reports, roles, and church assignments.
-
-- **District Reporting Dashboard**
-  - District-level summary reports viewable via shortcode.
-  - Exportable CSV files for reporting and analysis.
-  - Sortable columns by name, date, and attendance totals.
+**Version:** 1.0.23  
+**Author:** Bo Kelleher  
+**Description:** A custom WordPress plugin to manage weekly and monthly church attendance reports with a structured user role system and a multi-tier administrative interface.
 
 ---
 
-## 🚀 Installation
+## 📦 Features
 
-1. Upload the plugin folder to `/wp-content/plugins/`.
-2. Activate the plugin via the WordPress Admin Dashboard.
-3. Configure user roles and assign churches via the custom taxonomy.
+### ✅ Role-Based Access
+- **District Admin**: Full access to all churches and reports.
+- **Church Admin**: Can manage users and submit reports for their church.
+- **Church Reporter**: Can enter attendance data for their church.
+- **Church Viewer**: Can only view reports for their assigned church.
 
----
+### ✅ Admin Pages
+- **Attendance Reports**: View all submitted attendance reports.
+- **Church Management**: Add, edit, or delete churches with metadata (pastor, city, website).
+- **Settings**: Plugin configuration options.
 
-## 🔧 Usage
+### ✅ Front-End Shortcodes
+- `[report_attendance_form]`: Report attendance from the front-end.
+- `[church_dashboard]`: View reports for a specific church with inline editing for admins.
+- `[district_attendance_report]`: Front-end report view for District Admins.
 
-Use the provided shortcodes to embed functionality:
-
-- `[district_attendance_report]`  
-  Display a sortable, exportable district summary table (visible to District Admins only).
-
-- `[church_attendance_form]`  
-  Embed the front-end form for submitting weekly/monthly attendance (visible to Church Reporters).
-
----
-
-## 🔐 Permissions
-
-| Role            | Capabilities                                 |
-|-----------------|----------------------------------------------|
-| District Admin  | View all data, manage churches & users       |
-| Church Admin    | Assign/report Church Reporters and Viewers   |
-| Church Reporter | Submit attendance forms                      |
-| Church Viewer   | View reports for their own church only       |
+### ✅ Custom Database Table
+- All church data is stored in the `car_churches` custom table (`$wpdb->prefix . 'car_churches'`).
 
 ---
 
-## 📁 Project Structure
+## 🔧 Installation
+
+1. Upload the plugin zip via WordPress admin or FTP.
+2. Activate the plugin.
+3. Use the new “Attendance Reports” menu in the admin sidebar.
+4. Navigate to **Settings** for plugin configuration.
+
+---
+
+## 🚧 In Development
+
+- Improved database wiring for front-end views.
+- Export tools (CSV download per report list).
+- Graphs and analytics for church trends.
+
+---
+
+## 🧪 Debugging
+
+The plugin writes debug logs:
+```php
+error_log('✅ shortcode-church-dashboard.php was loaded');
+```
+
+---
+
+## 📁 File Structure
 
 ```
-church-attendance-plugin/
+church-attendance-reports/
+│
 ├── includes/
-├── templates/
-├── shortcode-district-report.php
-├── shortcode-church-form.php
-├── church-attendance-plugin.php
-└── readme.md
+│   ├── roles.php
+│   ├── post-types.php
+│   ├── taxonomy-church.php
+│   ├── admin-reports.php
+│   └── ...
+├── assets/
+│   ├── js/
+│   └── css/
+├── church-attendance-reports.php
+└── README.md
 ```
 
 ---
 
-## 🧑‍💻 Author
+## 🙋 Support
 
-**Bo Kelleher**  
-Eastern Tennessee District, Nazarene Discipleship International  
-https://etndi.org
-
----
-
-## 📄 License
-
-This plugin is licensed under the [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
-
----
-
-## 💬 Feedback & Contributions
-
-For feedback, improvements, or to contribute, feel free to open an issue or pull request on [GitHub](https://github.com/bokelleher/car).
+If you find bugs or want to suggest improvements, please [open an issue](https://github.com/bokelleher/car/issues) or fork and submit a pull request.
