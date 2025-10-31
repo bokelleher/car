@@ -4,6 +4,11 @@
  * Description: Manages church attendance reports with role-based access control.
  * Version: 1.1.5
  * Author: Bo Kelleher
+ * Author URI: https://github.com/bokelleher
+ * License: MIT
+ * License URI: https://opensource.org/licenses/MIT
+ * Text Domain: church-attendance-reports
+ * Domain Path: /languages
  */
 
 if (!defined('ABSPATH')) exit;

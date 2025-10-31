@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Better column width distribution across the dashboard table
 - Improved button styling with proper min-width constraints
 - Enhanced padding on attendance number columns from 8px 2px to 8px 4px
+- **Changed license from Proprietary to MIT License** - now open source!
 
 ## [1.1.4] - 2025-10-30
 

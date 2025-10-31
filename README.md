@@ -1,7 +1,11 @@
 # Church Attendance Reports
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-1.1.5-blue.svg)](https://github.com/bokelleher/car/releases)
+
 **Version:** 1.1.5  
 **Author:** Bo Kelleher  
+**License:** MIT  
 **Description:** A comprehensive WordPress plugin to manage weekly and monthly church attendance reports with a structured user role system and multi-tier administrative interface.
 
 ---
@@ -167,14 +171,21 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
 
 ## 🤝 Contributing
 
-This is a private plugin developed for church district management. If you find bugs or have feature requests, please contact the author.
+Contributions are welcome! If you find bugs or have feature requests:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ---
 
 ## 📄 License
 
-Proprietary - All Rights Reserved  
-© 2025 Bo Kelleher
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Copyright (c) 2025 Bo Kelleher
 
 ---
 
