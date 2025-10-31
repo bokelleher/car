@@ -1,0 +1,201 @@
+/* Single Church Page - Directory Card Style */
+
+.car-single-church-page {
+    padding: 60px 40px !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Church Card - Full Width */
+.car-single-church-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Church Name - Large */
+.car-church-name {
+    font-size: 3em;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    color: #1a4d6d;
+    line-height: 1.1;
+}
+
+/* City Pill - Teal */
+.car-city-pill {
+    display: inline-block;
+    background: #d4f1f4;
+    color: #0a7c8c;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.95em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Divider */
+.car-divider {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 25px 0;
+}
+
+/* Church Details */
+.car-church-details {
+    margin-bottom: 30px;
+}
+
+.car-detail-row {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.car-detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.car-detail-row strong {
+    display: inline-block;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+.car-detail-row a {
+    color: #1a7c8c;
+    text-decoration: none;
+}
+
+.car-detail-row a:hover {
+    text-decoration: underline;
+}
+
+/* Action Buttons */
+.car-action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.car-btn {
+    display: block;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+}
+
+.car-btn-teal {
+    background: #1a7c8c;
+    color: white;
+}
+
+.car-btn-teal:hover {
+    background: #15626f;
+    color: white;
+    text-decoration: none;
+}
+
+.car-btn-green {
+    background: #4caf50;
+    color: white;
+}
+
+.car-btn-green:hover {
+    background: #45a049;
+    color: white;
+    text-decoration: none;
+}
+
+/* Map Section */
+.car-map-section {
+    width: 100%;
+    margin: 0 auto 30px auto;
+}
+
+#car-single-church-map {
+    width: 100%;
+    height: 450px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Back Button Section */
+.car-back-section {
+    text-align: center;
+}
+
+.car-back-link {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: color 0.2s ease;
+}
+
+.car-back-link:hover {
+    color: #1a7c8c;
+    text-decoration: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .car-single-church-page {
+        padding: 40px 15px;
+        max-width: 100%;
+    }
+    
+    .car-single-church-card {
+        padding: 30px 25px;
+    }
+    
+    .car-church-name {
+        font-size: 2.2em;
+    }
+    
+    .car-action-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    #car-single-church-map {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .car-single-church-card {
+        padding: 25px 20px;
+    }
+    
+    .car-church-name {
+        font-size: 1.8em;
+    }
+    
+    .car-city-pill {
+        font-size: 0.9em;
+        padding: 5px 14px;
+    }
+    
+    .car-btn {
+        padding: 12px 18px;
+        font-size: 0.9em;
+    }
+    
+    #car-single-church-map {
+        height: 300px;
+    }
+}

@@ -1,0 +1,355 @@
+/* assets/css/church-directory.css */
+
+.car-directory-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Search and Filter Controls */
+.car-directory-controls {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.car-directory-search {
+    position: relative;
+    max-width: 700px; /* Increased from 500px to accommodate longer placeholder */
+    margin: 0 auto 20px;
+}
+
+.car-directory-search input {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.car-directory-search input:focus {
+    outline: none;
+    border-color: #007c91;
+    box-shadow: 0 0 0 3px rgba(0, 124, 145, 0.1);
+}
+
+.car-directory-search .search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+/* Stats Bar */
+.car-directory-stats {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.car-directory-stats #church-count {
+    font-weight: bold;
+    color: #007c91;
+    font-size: 16px;
+}
+
+.car-directory-stats .map-link {
+    margin-left: 15px;
+    color: #007c91;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.car-directory-stats .map-link:hover {
+    text-decoration: underline;
+}
+
+/* Church Grid */
+.car-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.car-directory-grid[data-columns="2"] {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.car-directory-grid[data-columns="4"] {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Church Card */
+.car-church-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.car-church-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.church-card-header {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.church-card-header h3 {
+    color: #007c91;
+    font-size: 1.3em;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.church-card-header h3 .church-name-link {
+    color: #007c91;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.church-card-header h3 .church-name-link:hover {
+    color: #005f6b;
+    text-decoration: underline;
+}
+
+.church-city {
+    display: inline-block;
+    background: #e8f4f6;
+    color: #007c91;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.church-card-body {
+    flex: 1;
+    font-size: 0.95em;
+}
+
+.church-card-body p {
+    margin: 10px 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+.church-card-body strong {
+    color: #555;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+.church-card-body a {
+    color: #007c91;
+    text-decoration: none;
+}
+
+.church-card-body a:hover {
+    text-decoration: underline;
+}
+
+.church-address {
+    font-size: 0.9em;
+    color: #666 !important;
+}
+
+.church-pastor {
+    font-weight: 500;
+}
+
+/* Card Footer */
+.church-card-footer {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.church-card-footer a,
+.church-card-footer span {
+    flex: 1;
+    padding: 8px 12px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 0.85em;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.btn-website {
+    background: #007c91;
+    color: white;
+}
+
+.btn-website:hover {
+    background: #005f6b;
+}
+
+.btn-directions {
+    background: #28a745;
+    color: white;
+}
+
+.btn-directions:hover {
+    background: #218838;
+}
+
+.btn-facebook {
+    background: #4267B2;
+    color: white;
+    cursor: default;
+}
+
+/* No Results */
+.car-no-results {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.car-no-results p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.car-no-results button {
+    padding: 10px 24px;
+    background: #007c91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.car-no-results button:hover {
+    background: #005f6b;
+}
+
+/* Hide cards when filtering */
+.car-church-card.hidden {
+    display: none;
+}
+
+/* Loading State */
+.car-directory-loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.car-directory-loading::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007c91;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1200px) {
+    .car-directory-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .car-directory-grid[data-columns="4"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .car-directory-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .car-directory-grid[data-columns="3"],
+    .car-directory-grid[data-columns="4"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .car-directory-container {
+        padding: 15px;
+    }
+    
+    .car-directory-controls {
+        padding: 20px 15px;
+    }
+    
+    .car-directory-search {
+        max-width: 100%;
+    }
+    
+    .car-directory-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .car-directory-grid[data-columns="2"],
+    .car-directory-grid[data-columns="3"],
+    .car-directory-grid[data-columns="4"] {
+        grid-template-columns: 1fr;
+    }
+    
+    .church-card-header h3 {
+        font-size: 1.2em;
+    }
+    
+    .church-card-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .church-card-footer a,
+    .church-card-footer span {
+        width: 100%;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .car-directory-controls,
+    .church-card-footer {
+        display: none;
+    }
+    
+    .car-directory-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .car-church-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

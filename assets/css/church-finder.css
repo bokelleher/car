@@ -1,0 +1,562 @@
+/* assets/css/church-finder.css */
+
+.car-church-finder-container {
+    max-width: 100%;
+    margin: 2em 0;
+}
+
+/* Search and Filter Controls */
+.car-finder-controls {
+    background: #f8f9fa;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+}
+
+.car-search-box {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+}
+
+.car-search-box input {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.car-search-box button {
+    padding: 0.75em 1.5em;
+    background: #007c91;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.car-search-box button:hover {
+    background: #005f6b;
+}
+
+.car-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+}
+
+.car-filters label {
+    margin: 0;
+    font-weight: 600;
+    color: #333;
+}
+
+.car-filters input[type="number"] {
+    width: 60px;
+    padding: 5px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.car-filters span {
+    margin: 0;
+    color: #666;
+}
+
+/* Map Container */
+.car-map-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 1.5em;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#car-church-map {
+    min-height: 500px;
+}
+
+/* Church List Sidebar */
+.car-church-list {
+    background: #f8f9fa;
+    padding: 1.5em;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.car-church-list h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.car-church-item {
+    background: white;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.car-church-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.car-church-item h4 {
+    margin: 0 0 0.5em 0;
+    color: #007c91;
+    font-size: 1.1em;
+}
+
+.car-church-item p {
+    margin: 0.3em 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.car-church-item .address {
+    color: #333;
+}
+
+.car-church-item .distance {
+    font-weight: bold;
+    color: #007c91;
+}
+
+.car-church-item .btn-show-on-map {
+    margin-top: 0.5em;
+    padding: 0.4em 1em;
+    background: #007c91;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+}
+
+.car-church-item .btn-show-on-map:hover {
+    background: #005f6b;
+}
+
+/* Info Window */
+.car-info-window {
+    padding: 0.5em;
+    min-width: 250px;
+}
+
+.car-info-window h3 {
+    margin: 0 0 0.5em 0;
+    color: #007c91;
+    font-size: 1.2em;
+}
+
+.car-info-window p {
+    margin: 0.3em 0;
+    font-size: 0.9em;
+}
+
+.car-info-window .pastor {
+    font-weight: 600;
+}
+
+.car-info-window .website a {
+    color: #007c91;
+    text-decoration: none;
+}
+
+.car-info-window .website a:hover {
+    text-decoration: underline;
+}
+
+.car-info-window .actions {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.car-info-window .btn-view-details,
+.car-info-window .btn-directions {
+    padding: 0.4em 0.8em;
+    background: #007c91;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.car-info-window .btn-directions {
+    background: #28a745;
+}
+
+.car-info-window .btn-view-details:hover {
+    background: #005f6b;
+}
+
+.car-info-window .btn-directions:hover {
+    background: #218838;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .car-church-finder-container {
+        padding: 0 15px;
+    }
+    
+    .car-finder-controls {
+        padding: 1em;
+    }
+    
+    .car-search-box {
+        flex-direction: column;
+        gap: 0.75em;
+    }
+    
+    .car-search-box input,
+    .car-search-box button {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    /* Stack search radius horizontally on mobile */
+    .car-filters {
+        justify-content: center;
+        margin-top: 1em;
+    }
+    
+    /* Critical: Stack map and list vertically */
+    .car-map-container {
+        grid-template-columns: 1fr !important;
+        gap: 0;
+    }
+    
+    #car-church-map {
+        min-height: 350px;
+        height: 50vh;
+    }
+    
+    /* Show church list below map */
+    .car-church-list {
+        max-height: none;
+        padding: 1em;
+        border-top: 2px solid #007c91;
+    }
+    
+    .car-church-list h3 {
+        font-size: 1.1em;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    
+    .car-church-item {
+        padding: 0.75em;
+        margin-bottom: 0.75em;
+    }
+    
+    .car-church-item h4 {
+        font-size: 1em;
+    }
+    
+    .car-church-item p {
+        font-size: 0.85em;
+    }
+    
+    /* Enhanced Mobile Info Window Styling */
+    .gm-style-iw-d {
+        max-width: 280px !important;
+    }
+    
+    .car-info-window {
+        padding: 10px;
+        min-width: 250px;
+        max-width: 280px;
+    }
+    
+    .car-info-window h3 {
+        font-size: 1.1em;
+        margin-bottom: 8px;
+    }
+    
+    .car-info-window p {
+        font-size: 0.9em;
+        margin: 5px 0;
+    }
+    
+    /* Mobile button styling */
+    .car-info-window .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 12px;
+    }
+    
+    .car-info-window .btn-view-details,
+    .car-info-window .btn-directions {
+        padding: 12px 20px !important;
+        font-size: 14px !important;
+        text-align: center;
+        width: 100%;
+        border-radius: 6px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border: none;
+        display: block;
+        line-height: 1.2;
+        min-height: 44px; /* iOS recommended touch target */
+    }
+    
+    .car-info-window .btn-view-details {
+        background: #007c91;
+        color: white;
+    }
+    
+    .car-info-window .btn-directions {
+        background: #28a745;
+        color: white;
+    }
+    
+    /* Touch feedback */
+    .car-info-window .btn-view-details:active,
+    .car-info-window .btn-directions:active {
+        transform: scale(0.98);
+    }
+    
+    /* Prevent text selection on buttons */
+    .car-info-window .actions button,
+    .car-info-window .actions a {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    #car-church-map {
+        min-height: 300px;
+    }
+    
+    .car-finder-controls {
+        padding: 0.75em;
+    }
+    
+    .car-filters label {
+        font-size: 0.9em;
+    }
+    
+    /* Even smaller info windows */
+    .gm-style-iw-d {
+        max-width: 240px !important;
+    }
+    
+    .car-info-window {
+        min-width: 220px;
+        max-width: 240px;
+    }
+    
+    .car-info-window .actions {
+        gap: 6px;
+    }
+    
+    .car-info-window .btn-view-details,
+    .car-info-window .btn-directions {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+    }
+}
+
+/* Church Dashboard Styles */
+.car-dashboard-container {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+.car-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+
+.car-dashboard-header h2 {
+    color: #007c91;
+    margin: 0;
+}
+
+.car-dashboard-actions {
+    display: flex;
+    gap: 1em;
+}
+
+.car-dashboard-table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2em;
+}
+
+.car-dashboard-table thead {
+    background: #007c91;
+    color: white;
+}
+
+.car-dashboard-table th {
+    padding: 1em;
+    text-align: left;
+    font-weight: 600;
+}
+
+.car-dashboard-table td {
+    padding: 0.8em 1em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.car-dashboard-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.car-dashboard-table td[contenteditable="true"] {
+    cursor: text;
+    position: relative;
+}
+
+.car-dashboard-table td[contenteditable="true"]:hover {
+    background: #fff3cd;
+}
+
+.car-dashboard-table td[contenteditable="true"]:focus {
+    background: #fff;
+    outline: 2px solid #007c91;
+    outline-offset: -2px;
+}
+
+/* Chart Container */
+.car-dashboard-chart-container {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2em;
+}
+
+.car-dashboard-chart-container h3 {
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+/* Event Form Styles */
+.car-event-form {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 2em;
+    background: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.car-event-form h3 {
+    color: #007c91;
+    margin-bottom: 1em;
+}
+
+.car-event-form .notice {
+    background: #d1ecf1;
+    color: #0c5460;
+    padding: 0.75em;
+    border-radius: 4px;
+    margin-bottom: 1.5em;
+}
+
+.car-event-form label {
+    display: block;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+.car-event-form input,
+.car-event-form select,
+.car-event-form textarea {
+    width: 100%;
+    padding: 0.75em;
+    margin-top: 0.3em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.car-event-form button {
+    background: #007c91;
+    color: white;
+    padding: 0.75em 2em;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.car-event-form button:hover {
+    background: #005f6b;
+}
+
+/* Loading States */
+.car-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    color: #666;
+}
+
+.car-loading::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #007c91;
+    border-radius: 50%;
+    animation: car-spin 1s linear infinite;
+    margin-left: 1em;
+}
+
+@keyframes car-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Print Styles */
+@media print {
+    .car-finder-controls,
+    .car-dashboard-actions,
+    .car-church-item button,
+    .car-info-window .actions {
+        display: none !important;
+    }
+    
+    .car-map-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .car-church-list {
+        max-height: none;
+    }
+}
