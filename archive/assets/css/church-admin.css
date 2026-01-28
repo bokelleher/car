@@ -1,5 +1,0 @@
-
-/* Hide the default "Add New Church" form on the taxonomy edit screen */
-body.taxonomy-church .term-add-wrap {
-  display: none !important;
-}
