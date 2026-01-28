@@ -1,0 +1,93 @@
+/*
+ * Styling for the My Account page of Church Attendance Reports.
+ *
+ * This stylesheet defines a modern, clean interface for the account
+ * management form, matching the look and feel of the dashboard. It
+ * uses card containers, crisp inputs, subtle shadows and clear
+ * alert messaging to guide the user through updating their details.
+ */
+
+.car-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px 18px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.car-my-account h1 {
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.car-field {
+  margin: 14px 0;
+}
+
+.car-field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.car-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  font-size: 16px;
+}
+
+.car-input:focus {
+  outline: none;
+  border-color: #94a3b8;
+  box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.25);
+}
+
+.car-input-disabled {
+  background: #f1f5f9;
+  color: #64748b;
+  cursor: not-allowed;
+  border: 1px solid #e2e8f0;
+}
+
+.car-help {
+  color: #64748b;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.car-btn {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 0;
+  background: #007c91; /* match other plugin buttons (teal) */
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+/* Hover state: darken the teal slightly */
+.car-btn:hover {
+  background: #005f6b;
+}
+
+.car-alert {
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin: 12px 0;
+  font-weight: 600;
+}
+
+.car-alert-success {
+  background: #ecfccb;
+  border: 1px solid #84cc16;
+}
+
+.car-alert-error {
+  background: #fee2e2;
+  border: 1px solid #ef4444;
+}
