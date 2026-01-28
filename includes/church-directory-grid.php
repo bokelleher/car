@@ -83,7 +83,7 @@ class CAR_Church_Directory {
             
             <div class="car-directory-grid" data-columns="<?php echo esc_attr($atts['columns']); ?>">
                 <?php foreach ($churches as $church): 
-                    $pastor = get_term_meta($church->term_id, 'pastor', true);
+                    $pastor = get_term_meta($church->term_id, 'pastor', true) ?: get_term_meta($church->term_id, 'pastor_name', true);
                     $address = get_term_meta($church->term_id, 'address', true);
                     $phone = get_term_meta($church->term_id, 'phone', true);
                     $website = get_term_meta($church->term_id, 'website', true);

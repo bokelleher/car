@@ -95,7 +95,13 @@ function car_save_church_meta_fields($term_id) {
     $fields = ['pastor_name', 'pastor_email', 'address', 'phone', 'website'];
     foreach ($fields as $field) {
         if (isset($_POST[$field])) {
-            update_term_meta($term_id, $field, sanitize_text_field($_POST[$field]));
+            $value = sanitize_text_field($_POST[$field]);
+            update_term_meta($term_id, $field, $value);
+            
+            // Also save pastor_name to 'pastor' for backward compatibility
+            if ($field === 'pastor_name') {
+                update_term_meta($term_id, 'pastor', $value);
+            }
         }
     }
 }
